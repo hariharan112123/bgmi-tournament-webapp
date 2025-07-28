@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(26, 9%, 10%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(24, 5%, 15%);
+  --muted-foreground: hsl(24, 5%, 64%);
+  --popover: hsl(24, 9%, 10%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(24, 9%, 18%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(24, 5%, 28%);
+  --input: hsl(24, 5%, 28%);
+  --primary: hsl(20, 100%, 50%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(24, 5%, 15%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(24, 5%, 15%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62%, 30%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(20, 100%, 50%);
+  --radius: 0.5rem;
+  
+  /* BGMI Gaming Colors */
+  --bgmi-orange: hsl(20, 100%, 50%);
+  --bgmi-gold: hsl(51, 100%, 50%);
+  --dark-bg: hsl(26, 9%, 10%);
+  --card-bg: hsl(24, 9%, 18%);
+  --success-green: hsl(142, 100%, 50%);
+  --error-red: hsl(0, 65%, 55%);
+}
+
+.dark {
+  --background: hsl(26, 9%, 10%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(24, 5%, 15%);
+  --muted-foreground: hsl(24, 5%, 64%);
+  --popover: hsl(24, 9%, 10%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(24, 9%, 18%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(24, 5%, 28%);
+  --input: hsl(24, 5%, 28%);
+  --primary: hsl(20, 100%, 50%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(24, 5%, 15%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(24, 5%, 15%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62%, 30%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(20, 100%, 50%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    background: var(--dark-bg);
+    color: var(--foreground);
+  }
+}
+
+@layer utilities {
+  .text-bgmi-orange {
+    color: var(--bgmi-orange);
+  }
+  
+  .text-bgmi-gold {
+    color: var(--bgmi-gold);
+  }
+  
+  .text-success-green {
+    color: var(--success-green);
+  }
+  
+  .text-error-red {
+    color: var(--error-red);
+  }
+  
+  .bg-bgmi-orange {
+    background-color: var(--bgmi-orange);
+  }
+  
+  .bg-bgmi-gold {
+    background-color: var(--bgmi-gold);
+  }
+  
+  .bg-success-green {
+    background-color: var(--success-green);
+  }
+  
+  .bg-error-red {
+    background-color: var(--error-red);
+  }
+  
+  .bg-dark-bg {
+    background-color: var(--dark-bg);
+  }
+  
+  .bg-card-bg {
+    background-color: var(--card-bg);
+  }
+  
+  .border-bgmi-orange {
+    border-color: var(--bgmi-orange);
+  }
+  
+  .border-bgmi-gold {
+    border-color: var(--bgmi-gold);
+  }
+  
+  .hover\:bg-bgmi-orange:hover {
+    background-color: var(--bgmi-orange);
+  }
+  
+  .hover\:text-bgmi-orange:hover {
+    color: var(--bgmi-orange);
+  }
+  
+  .hover\:border-bgmi-orange:hover {
+    border-color: var(--bgmi-orange);
+  }
+  
+  .gaming-gradient {
+    background: linear-gradient(135deg, var(--bgmi-orange), var(--bgmi-gold));
+  }
+  
+  .card-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-4px);
+    border-color: var(--bgmi-orange);
+  }
+}
